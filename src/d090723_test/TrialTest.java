@@ -36,4 +36,8 @@ public class TrialTest {
 	public void testDelimiter() {
 		assertEquals(3, main.add("//.;\n1;2"));
 	}
+	@Test
+	public void testNewLine() {
+		assertEquals(6, main.add("1\n2,3"));
+	}
 }
