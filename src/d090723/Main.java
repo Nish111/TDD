@@ -1,6 +1,12 @@
 package d090723;
-public class Main {
 
+import org.junit.Test;
+
+public class Main {
+	@Test
+	int add(String numbers) {
+		
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
