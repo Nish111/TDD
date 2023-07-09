@@ -30,6 +30,10 @@ public class TrialTest {
 	}
 	@Test
 	public void testManyNumbers() {
-		assertEquals(1, main.add("1,2"));
+		assertEquals(3, main.add("1,2"));
+	}
+	@Test
+	public void testDelimiter() {
+		assertEquals(3, main.add("//.;\n1;2"));
 	}
 }
