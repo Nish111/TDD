@@ -24,4 +24,8 @@ public class TrialTest {
 	public void testEmptyString() {
 		assertEquals(0, main.add(""));
 	}
+	@Test
+	public void testOnlyOneNumber() {
+		assertEquals(1, main.add("1"));
+	}
 }
