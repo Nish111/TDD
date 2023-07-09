@@ -51,6 +51,11 @@ public class TrialTest {
 		} catch (IllegalArgumentException e) {
 			assertEquals(e.getMessage(), "Negatives not allowed: -1");
 		}
+		try {
+			main.add("-1, 2, -3, -4");
+		} catch (IllegalArgumentException e) {
+			assertEquals(e.getMessage(), "Negatives not allowed: -1, -4");
+		}
 	}
 	
 }

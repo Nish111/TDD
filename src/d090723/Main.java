@@ -20,10 +20,18 @@ public class Main {
 		StringBuilder stringBuilder = new StringBuilder();
 		for(String item:list) {
 			if(Integer.parseInt(item)<0) {
-				throw new IllegalArgumentException("Negatives not allowed: "+stringBuilder);
+				{
+					if(stringBuilder.toString().equals("")) {
+						stringBuilder = new StringBuilder(Integer.parseInt(item));
+					} 
+					else stringBuilder.append(",").append(Integer.parseInt(item));
+				}
 			}
 			if(Integer.parseInt(item)>0) {
 				sum +=Integer.parseInt(item);
+			}
+			if(!stringBuilder.toString().equals("")) {
+				throw new IllegalArgumentException("Negatives not allowed: "+stringBuilder);
 			}
 		}
 		return sum;
