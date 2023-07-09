@@ -16,8 +16,17 @@ public class Main {
 		}
 	}
 	public int addition(String[] list) {
-		// TODO Auto-generated method stub
-		return 0;
+		int sum = 0;
+		StringBuilder stringBuilder = new StringBuilder();
+		for(String item:list) {
+			if(Integer.parseInt(item)<0) {
+				throw new IllegalArgumentException("Negatives not allowed: "+stringBuilder);
+			}
+			if(Integer.parseInt(item)>0) {
+				sum +=Integer.parseInt(item);
+			}
+		}
+		return sum;
 	}
 	public String[] divideNumbers(String numbers, String delimiter) {
 		return numbers.split(delimiter);

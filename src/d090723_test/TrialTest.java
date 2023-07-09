@@ -40,4 +40,8 @@ public class TrialTest {
 	public void testNewLine() {
 		assertEquals(6, main.add("1\n2,3"));
 	}
+	@Test
+	public void testMoreLine() {
+		assertEquals(15, main.add("1,2,3,4,5"));
+	}
 }
