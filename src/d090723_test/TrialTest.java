@@ -28,4 +28,8 @@ public class TrialTest {
 	public void testOnlyOneNumber() {
 		assertEquals(1, main.add("1"));
 	}
+	@Test
+	public void testManyNumbers() {
+		assertEquals(1, main.add("1,2"));
+	}
 }
