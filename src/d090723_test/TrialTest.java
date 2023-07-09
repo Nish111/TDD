@@ -41,7 +41,16 @@ public class TrialTest {
 		assertEquals(6, main.add("1\n2,3"));
 	}
 	@Test
-	public void testMoreLine() {
+	public void testMoreNumbers() {
 		assertEquals(15, main.add("1,2,3,4,5"));
 	}
+	@Test
+	public void testNegativeNumbers() {
+		try {
+			main.add("-1, 2");
+		} catch (IllegalArgumentException e) {
+			assertEquals(e.getMessage(), "Negatives not allowed: -1");
+		}
+	}
+	
 }
